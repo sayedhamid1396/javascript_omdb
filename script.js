@@ -40,7 +40,7 @@ function searchByTitle(){
 }
 function getMovies(movieTitle,page){
     mainContent.innerHTML=""
-  fetch(`http://www.omdbapi.com/?apikey=dd7e260a&s=${movieTitle}&page=${page}`)
+  fetch(`https://www.omdbapi.com/?apikey=dd7e260a&s=${movieTitle}&page=${page}`)
     .then(res=> res.json())
     .then(data=> {
         if(data.totalResults){
@@ -55,7 +55,7 @@ function getMovies(movieTitle,page){
 
     function getMovieById(id){
    
-         fetch(`http://www.omdbapi.com/?apikey=dd7e260a&i=${id}`)
+         fetch(`https://www.omdbapi.com/?apikey=dd7e260a&i=${id}`)
          .then(res=> res.json())
          .then(data=> showMovies(data))
                               }
