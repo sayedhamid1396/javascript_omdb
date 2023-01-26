@@ -40,7 +40,7 @@ function searchByTitle(){
 }
 function getMovies(movieTitle,page){
     mainContent.innerHTML=""
-  fetch(`https://www.omdbapi.com/?apikey=dd7e260a&s=${movieTitle}&page=${page}`)
+  fetch(`http://www.omdbapi.com/?apikey=dd7e260a&s=${movieTitle}&page=${page}`)
     .then(res=> res.json())
     .then(data=> {
         if(data.totalResults){
